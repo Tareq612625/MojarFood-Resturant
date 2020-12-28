@@ -15,13 +15,13 @@ const MenuItem=props=>{
                     >
                     </CardImg>
                     <CardImgOverlay>
-                        <CardTitle 
+                        <h4><CardTitle 
                             style={{cursor:"pointer"}} 
                             // onClick={() => props.DishSelect(props.dish)} //Data Binding Process
                             onClick={props.DishSelect}
                         >
                             {props.dish.name}
-                        </CardTitle>
+                        </CardTitle></h4>
                     </CardImgOverlay>
                 </CardBody>
             </Card>
