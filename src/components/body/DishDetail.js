@@ -10,12 +10,10 @@ const DisDetail=props=>{
                  <CardImg top src={props.dish.image} alt={props.dish.name} />
                  <CardBody style={{textAlign:"left"}}>
                      <h4><CardTitle>{props.dish.name}</CardTitle></h4>
-                     <CardText>
-                         <p>{props.dish.description}</p>
-                         <b><p>Price : {props.dish.price}/-(BDT)</p></b>
-                     </CardText>
+                    <CardText> {props.dish.description}</CardText>
+                    <CardText> Price : {props.dish.price}/-(BDT)</CardText>
                      <hr/>
-                     <LoadComments comments={props.dish.comments} />
+                     <LoadComments comments={props.comments} />
                  </CardBody>
              </Card>
          </div>
