@@ -5,7 +5,7 @@ import Loading from "./Loading"
 class Home extends Component {
 
     render() {
-        document.title = "MojarFood Resturant"
+        document.title = "Rahim Store"
         return (
             <div>
                 <Loading />

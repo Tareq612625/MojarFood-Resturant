@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import MenuItem from './MenuItem'
 import DisDetail from './DishDetail'
-import { CardColumns, Modal, ModalBody, ModalFooter, Button } from 'reactstrap'
+import { CardColumns, Modal, ModalBody, ModalFooter, Button, Form, Input } from 'reactstrap'
 import { connect } from 'react-redux';
 import { addComment, fatchDishes } from '../../redux/actionCreators'
 import Loading from "./Loading"
+import Filter from "./Filter"
 
 
 const mapStateProps = state => {
@@ -74,7 +75,14 @@ class Menu extends Component {
 
             return (
                 <div className="container">
+                    <Filter
+                        price={this.state.price}
+                        sort={this.state.sort}
+                        handelChangeSort={this.handelChangeSort}
+                    />
+                    <br />
                     <div className="row">
+
                         <CardColumns>
                             {menu}
                         </CardColumns>
@@ -87,7 +95,9 @@ class Menu extends Component {
                             </ModalFooter>
                         </Modal>
                     </div>
+                    <div><br /><br /><br></br></div>
                 </div>
+
             );
         }
 
